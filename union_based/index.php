@@ -3,10 +3,10 @@ require "config.php";
 if (isset($_GET['name']) && isset($_GET['type'])){
     $type = $_GET['type'];
     $name = $_GET['name'];
-    if (preg_match('/\"|\|\'/',$type)){
+    if (preg_match('/\"|\'/',$type)){
         die("Dau vao khong hop le");
     }
-    if (preg_match('/\"|\|\'/', $name)){
+    if (preg_match('/\"|\'/', $name)){
         die("No hack");
     }
     $query = "SELECT * FROM products WHERE name='$name' AND type='$type'";
