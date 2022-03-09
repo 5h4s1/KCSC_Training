@@ -12,7 +12,7 @@ if (isset($_POST['username']) && $_POST['password']) {
     $query = "SELECT * FROM users  WHERE username = '$username' AND password = '$password'";
     echo $query;
     $datas = $conn->query($query) ;
-    
+    #hihihi
 } 
 ?>
 <!DOCTYPE html>
