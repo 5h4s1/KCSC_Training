@@ -12,17 +12,6 @@ if (isset($_POST['username']) && $_POST['password']) {
     $query = "SELECT * FROM users  WHERE username = '$username' AND password = '$password'";
     echo $query;
     $datas = $conn->query($query) ;
-    if (isset($datas -> num_rows ) and $datas -> num_rows > 0) {
-        $datas = $datas->fetch_assoc();
-        if ($datas['password'] === $password && $datas['username'] === $username) {
-            echo "Yes Yes Yes";
-        } else {
-            echo "No No No";
-        }
-    }
-    else{
-        echo "No No No";
-    }
     
 } 
 ?>
